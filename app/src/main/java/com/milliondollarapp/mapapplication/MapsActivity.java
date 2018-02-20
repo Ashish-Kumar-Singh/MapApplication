@@ -59,9 +59,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     try {
                         List<Address> addressList =geocoder.getFromLocation(latitude,longitude,1);
                         String str = addressList.get(0).getLocality()+" , ";
-                        str +=addressList.get(0).getCountryName()" ,";
+                        str +=addressList.get(0).getCountryName()+" ,";
                         mMap.addMarker(new MarkerOptions().position(latLng).title(str));
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12f));
+                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
